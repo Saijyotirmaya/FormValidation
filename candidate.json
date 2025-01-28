@@ -1,0 +1,79 @@
+{
+    
+     
+    
+        "formData":[],
+       "EditMode": false,
+        
+    "CandidateId":"",
+
+    "Name" : "",
+    "MobileNo" : "",
+    "mail":"",
+    "totalexp":"",
+    "relevantexp":"",
+    "skill":"",
+    "ctc" : "",
+    "ectc" : "",
+    "noticeperiod":"",
+    "howsooncanjion":"",
+    "currentlocation":"",
+    "newjoblocation":"",
+
+   "avalableforinterview" : "",
+    
+    
+    "valueStateName": "None",
+    "ValueStateTextName": "Only alphabets and spaces are allowed",
+    "valueStateMobileNo": "None",
+    "ValueStateTextMobileNo":"Please enter a valid mobile number",
+    "mailvalueStat":"None",
+    "mailValueStateText":"Please enter a valid email address.",
+    "valueStatectc": "None",
+    "ValueStateTextctc": "",
+    "valueStateectc": "None",
+    "ValueStateTextectc": "",
+    "valueStateavalableforinterview": "None",
+    "ValueStateTextavalableforinterview": "",
+        
+      
+    "Skills":[
+        { "key": "Sapui5", "text": "SAPUI5" },
+        { "key": "ABAP", "text": "ABAP" },
+        { "key": "ABAP+RAP", "text": "ABAP+RAP" },
+        { "key": "SAPSD", "text": "SAP SD" },
+        { "key": "UI5+CAPM", "text": "UI5+CAPM" }
+    ],
+   
+    "candidates": [],
+
+    "experiences": [
+        { "key": "1", "text": "0-1 Years" },
+        { "key": "2", "text": "1-3 Years" },
+        { "key": "3", "text": "3-5 Years" },
+        { "key": "4", "text": "5+ Years" }
+    ],
+    "noticeperiodData":[
+        { "key": "1month", "text": "1 month" },
+        { "key": "2month", "text": "2month" },
+        { "key": "1week", "text": "1 week" },
+        { "key": "2week", "text": "2 week" }
+    ],
+    "howsooncanjoin":[
+        { "key": "immediately", "text": "immediately" },
+        { "key": "1month", "text": "1 month" },
+        { "key": "2month", "text": "2month" },
+        { "key": "1week", "text": "1 week" },
+        { "key": "2week", "text": "2 week" }
+    ],
+
+    "selectedCountry": "",
+    "selectedState": ""
+    
+      
+    
+    
+}
+  
+    
+    
