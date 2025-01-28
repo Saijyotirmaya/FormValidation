@@ -1,0 +1,236 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+>
+
+    <Dialog
+        id="idcandidatedialog"
+        afterClose="onDialogClose"
+    >
+        <VBox>
+            <f:SimpleForm
+                class="classsimpleform"
+                labelSpanXL="4"
+                labelSpanL="5"
+                labelSpanM="12"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="0"
+                emptySpanL="0"
+                emptySpanM="0"
+                emptySpanS="0"
+                columnsXL="2"
+                columnsL="2"
+                columnsM="3"
+                singleContainerFullSize="false"
+            >
+                <Label text="{i18n>CandidateID}" />
+                <Input
+                    id="idcandidate"
+                    required="true"
+                    editable="false"
+                    value="{Omodel>/CandidateId}"
+                />
+                <Label text="{i18n>Name}" />
+                <Input
+                    value="{Omodel>/Name}"
+                    change="onNamechange"
+                    valueState="{Omodel>/valueStateName}"
+                    valueStateText="{Omodel>/ValueStateTextName}"
+                    required="true"
+                />
+                <Label text="{i18n>MobNumber}" />
+                <Input
+                    value="{Omodel>/MobileNo}"
+                    id="idmobile"
+                    maxLength="10"
+                    valueState="{Omodel>/valueStateMobileNo}"
+                    valueStateText="{Omodel>/ValueStateTextMobileNo}"
+                    liveChange="onchangeofmobNumber"
+                    required="true"
+                />
+                <!-- <Label text="{i18n>mail}" />
+                <Input
+                    value="{Omodel>/mail}"
+                    id="idmail"
+                    valueState="{Omodel>/mailvalueStat}"
+                    valueStateText="{Omodel>/mailValueStateText}"
+                    change="onchangeofmail"
+                    required="true"
+                /> -->
+                <Label text="{i18n>skill}" />
+                <ComboBox
+                    id="idSkill"
+                    value="{Omodel>/skill}"
+                    items="{ 
+                    path: 'Omodel>/Skills' }"
+                    required="true"
+                >
+                    <core:Item
+                        key="{Omodel>key}"
+                        text="{Omodel>text}"
+                    />
+                   
+                </ComboBox>
+                <Label text="{i18n>totalexp}" />
+                <ComboBox
+                    id="idTotalexperience"
+                    items="{
+                path: 'Omodel>/experiences'
+                                    }"
+                    value="{Omodel>/totalexp}"
+                    required="true"
+                >
+                    <core:Item
+                        key="{Omodel>key}"
+                        text="{Omodel>text}"
+                    />
+                </ComboBox>
+
+                <Label text="{i18n>relevantexp}" />
+                <ComboBox
+                    id="idrelevantexperience"
+                    items="{
+                path: 'Omodel>/experiences'
+                                    }"
+                    value="{Omodel>/relevantexp}"
+                    required="true"
+                >
+                    <core:Item
+                        key="{Omodel>key}"
+                        text="{Omodel>text}"
+                    />
+                </ComboBox>
+                <Label text="{i18n>ctc}" />
+                <Input
+                    value="{Omodel>/ctc}"
+                    change="onCtcchange"
+                    valueState="{Omodel>/valueStatectc}"
+                    valueStateText="{Omodel>/ValueStateTextctc}"
+                    type="Number"
+                    required="true"
+                />
+                <Label text="{i18n>ectc}" />
+                <Input
+                    value="{Omodel>/ectc}"
+                    change="onCtcchange"
+                    valueState="{Omodel>/valueStateectc}"
+                    valueStateText="{Omodel>/ValueStateTextectc}"
+                    type="Number"
+                    required="true"
+                />
+                <Label text="{i18n>Noticeperiod}" />
+                <ComboBox
+                    id="idnoticperiod"
+                      items="{
+                path: 'Omodel>/noticeperiodData'
+                                    }"
+                    value="{Omodel>/noticeperiod}"
+                    required="true"
+                >
+                    <core:Item
+                        key="{Omodel>key}"
+                        text="{Omodel>text}"
+                    />
+                    
+                </ComboBox>
+                <Label text="{i18n>howsooncanjoin}" />
+                <ComboBox
+                    id="idhowsooncanjoin"
+                    items="{
+                  path: 'Omodel>/howsooncanjoin'
+                    }"
+                    value="{Omodel>/howsooncanjion}"
+                    required="true"
+                >
+
+                    <core:Item
+                        key="{Omodel>key}"
+                        text="{Omodel>text}"
+                    />
+                    
+                </ComboBox>
+                <Label text="{i18n>currentlocation}" />
+                <ComboBox
+                id="idcountryCombo"
+                      placeholder="Select Country"
+             
+                     items="{
+                         path: 'Omodel>/countries',
+                 templateShareable: false
+      }"
+      change="onCountryChange" value="{Omodel>/currentlocation}"
+      required="true"
+                >
+                    <core:Item
+                        key="{Omodel>country}"
+                        text="{Omodel>country}"
+                        xmlns:core="sap.ui.core"
+                    />
+                </ComboBox>
+                <ComboBox
+              id="idStateComboBox"
+               placeholder="Select State"
+                  
+                     items="{
+                         path: 'Omodel>/countries',
+                 templateShareable: false
+      }" required="true" change="onstatechange"
+    
+            >
+            <core:Item key="{Omodel>states}" 
+            text="{Omodel>states}"
+              xmlns:core="sap.ui.core"/>
+        </ComboBox>
+
+                <Label text="{i18n>newjoblocation}" />
+                <ComboBox
+                    id="idcountryComboBox"
+                    items="{
+                path: 'Omodel>/countries'
+            }" value="{Omodel>/newjoblocation}"
+            required="true"
+                >
+                    <core:Item
+                        key="{Omodel>name}"
+                        text="{Omodel>name}"
+                        xmlns:core="sap.ui.core"
+                    />
+                </ComboBox>
+                <Label text="{i18n>Avalableforinterview}" />
+                <DateTimePicker
+                    id="dateTimePicker"
+                    valueFormat="yyyy-MM-dd'T'HH:mm:ss"
+                    displayFormat="dd MMM yyyy, HH:mm"
+                    value="{Omodel>/avalableforinterview}"
+                    valueState="{Omodel>/valueStateavalableforinterview}"
+                    valueStateText="{Omodel>/ValueStateTextavalableforinterview}"
+                    required="true"
+                />
+
+                
+             
+            </f:SimpleForm>
+
+          
+
+             
+        </VBox>
+          <beginButton>
+              <Button
+                    text="{i18n>save}"
+                    type="Emphasized"
+                    press=".onSavepress"
+                />
+                </beginButton>
+                <endButton>
+                   <Button
+                    text="{i18n>cancel}"
+                      type="Emphasized"
+                    press=".onCancelpress"
+                />
+                </endButton>
+    </Dialog>
+</core:FragmentDefinition>
