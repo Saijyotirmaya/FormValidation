@@ -1,0 +1,121 @@
+<mvc:View controllerName="com.kt.com.project7.controller.Main"
+    xmlns="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:m="sap.m"
+    height="100%">
+    <m:Page id="idformTablePage" 
+        title="{i18n>title}" 
+        showHeader="false">
+			<Table id="idFormtable"
+				rows="{Omodel>/formData}"
+				ariaLabelledBy="title"	
+				alternateRowColors="true"
+				>
+				
+				<extension>
+					<m:OverflowToolbar style="Clear">
+						<m:Title id="idTitle" class="tableTitle" text="{i18n>CandidateDetails}"/>
+						<m:ToolbarSpacer/>
+							
+						<m:Button text="Add candidate"
+							press="onCandidatepress"
+							type="Emphasized"
+							icon="sap-icon://add-employee"/>
+
+						
+						
+					</m:OverflowToolbar>
+				</extension>
+				  <columns>
+					<Column>
+						<m:Label text="{i18n>CandidateID}" />
+						<template> 
+							<m:Text text="{Omodel>ID}"  />
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="{i18n>Name}" />
+						<template>
+							<m:Text text="{Omodel>name}"/>
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="{i18n>MobNumber}" />
+						<template>
+							<m:Text text="{Omodel>Vnumber}" />
+						</template>
+					</Column>
+					
+					<!-- <Column>
+						<m:Label text="{i18n>mail}" />
+						<template>
+							<m:Text text="{Omodel>Vmail}" />
+						</template>
+					</Column> -->
+
+					<Column>
+						<m:Label text="{i18n>skill}" />
+						<template>
+							<m:Text text="{Omodel>Vskill}" />
+						</template>
+					</Column>
+                    <Column>
+						<m:Label text="{i18n>totalexp}" />
+						<template>
+							<m:Text text="{Omodel>Vtotalexp}" />
+						</template>
+					</Column>
+                    <Column>
+						<m:Label text="{i18n>relevantexp}" />
+						<template>
+							<m:Text text="{Omodel>Vrelevantexp}" />
+						</template>
+					</Column>
+                    <Column>
+						<m:Label text="{i18n>ctc}" />
+						<template>
+							<m:Text text="{Omodel>VcurrentCTC}" />
+						</template>
+					</Column>
+                    <Column>
+						<m:Label text="{i18n>ectc}" />
+						<template>
+							<m:Text text="{Omodel>VexpectedCTC}" />
+						</template>
+					</Column>
+                    <Column>
+						<m:Label text="{i18n>Noticeperiod}" />
+						<template>
+							<m:Text text="{Omodel>Vnoticperiod}" />
+						</template>
+					</Column>
+                    <Column>
+						<m:Label text="{i18n>howsooncanjoin}" />
+						<template>
+							<m:Text text="{Omodel>Vnoticperiod}" />
+						</template>
+					</Column>
+                    <Column>
+						<m:Label text="{i18n>currentlocation}" />
+						<template>
+							<m:Text text="{Omodel>Vcurrent} {Omodel>VState}" />
+						</template>
+					</Column>
+                    <Column> 
+						<m:Label text="{i18n>newjoblocation}" />
+						<template>
+							<m:Text text="{Omodel>Vnewjoblocation}" />
+						</template>
+					</Column>
+                    <Column>
+						<m:Label text="{i18n>Avalableforinterview}" />
+						<template>
+							<m:Text text="{Omodel>Vavailable}" />
+						</template>
+					</Column>
+					
+				</columns>
+			</Table>
+	</m:Page>
+</mvc:View>
